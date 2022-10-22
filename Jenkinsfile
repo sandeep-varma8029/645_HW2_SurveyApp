@@ -18,7 +18,7 @@ pipeline {
 				script{
 					checkout scm
 					sh 'rm -rf *.war'
-					sh 'cd HW1_Survey_form/src/main/webapp
+					sh 'cd HW1_Survey_form/src/main/webapp'
 					sh 'jar -cvf HW1_Survey_form.war *'
 					sh 'echo "Sandy@0829v" | docker login --username sandeepvarma99 --password-stdin'
 					sh "docker build -t sandeepvarma99/hw2surveyapp:${env.BUILD_ID} ." 
