@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: surveyapp
+  labels:
+    app: surveyapp
+spec:
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: surveyapp
+      
+  template:
+    metadata:
+      labels:
+        app: surveyapp
+        tier: surveyapp
+    spec:
+      containers:
+        - name: surveyapp
+          image: sandeepvarma99/hw2surveyapp:1.0
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8080
+            name: surveyapp
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: surveyapp
+  labels:
+    app: surveyapp
+spec:
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: surveyapp
+    tier: surveyapp
+  type: LoadBalancer
