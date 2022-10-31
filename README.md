@@ -191,5 +191,4 @@ The application can be assessed at http://34.122.32.168:8080/HW1_Survey_form/
 
 AWS URL of the HomePage : http://studentsurveyapp.s3-website-us-east-1.amazonaws.com/
 
-Project Demo Link : 
-
+Project Demo Link : https://drive.google.com/file/d/1EqZemRzBKUokM3IK3q_2spCHs0Q79_wx/view?usp=share_link
