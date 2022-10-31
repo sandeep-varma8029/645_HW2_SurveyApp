@@ -1,3 +1,7 @@
+#Sai Sandeep Varma Mudundi, G01352322, smudund@gmu.edu
+#defines how the built container should be deployed on Kubernetes. 
+#The definition pulls the built container from Docker Hub and creates a new deployment with it in your Kubernetes cluster. 
+#It also creates a LoadBalancer service so that the deployment can be accessed from outside the cluster.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
