@@ -139,4 +139,55 @@ Step 4: Creating a Docker Container
 ![image](https://user-images.githubusercontent.com/32533425/198989937-4607bb99-4dec-41fe-a967-95ccb8f78b2c.png)
 
 
-Step 5: Create deployment file for Kubernetes
+Step 5: Create deployment file for Kubernetes and JenkinsFile for the Jenkins pipeline
+
+A deployment.yaml file in the repository is added which defines how the built container should be deployed on Kubernetes.
+The definition pulls the built container from Docker Hub and creates a new deployment with it in your Kubernetes cluster. It also creates a LoadBalancer service so that the deployment can be accessed from outside the cluster.
+
+Finally, create a pipeline script named Jenkinsfile (also added in the repo). This is the script Jenkins will use to build and deploy the application.
+What the Jenkins pipeline file does are as follows;
+
+    · Pull from your repository
+    · Dockerize the application
+    · Push the image to docker hub
+    · Update the deployment YAML file with the build number
+    · Deploy to GKE
+
+Step 6: Jenkins Pipeline Setup
+
+We are using Jenkins as our CI/CD
+
+    · Open Jenkins on GCP
+    · Click on New Item
+    · Enter Jenkins job name
+    . Under 'Build Triggers' select 'GitHub hook trigger for GITScm polling' and 'Poll SCM'
+    · Select Pipeline and ok
+    · Click on pipeline
+    · Select Pipline script from SCM as definition
+    · Select git as SCM
+    · Enter your repository url
+    · Enter Jenkinsfile in the script path
+    · Click on apply and save
+
+![image](https://user-images.githubusercontent.com/32533425/198995187-c781f3cd-b73f-4a31-95fa-615798cc3761.png)
+
+The Job will appear on your jenkins dashboard
+
+Step 6: Building and Deploying the Application
+
+Click on selected job and Click on Build now to run the job
+
+![image](https://user-images.githubusercontent.com/32533425/198995821-4ce1b091-225e-4b71-8ab2-69f2f09480c6.png)
+
+After successful Jenkins job build, an instance of the application(s) is/are created on GKE
+
+![image](https://user-images.githubusercontent.com/32533425/198996196-8d7351ee-1678-45aa-b08c-6dee06dd0626.png)
+
+
+The application can be assessed at http://34.122.32.168:8080/HW1_Survey_form/
+
+
+![image](https://user-images.githubusercontent.com/32533425/198996318-6b577534-96f2-47b4-9a49-fd1edbdd917c.png)
+
+
+
