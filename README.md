@@ -12,7 +12,7 @@ The basic Requirements Include:
     3. Docker
     4. Docker Hub Account
     5. GCP Kubernetes Cluster
-Step 1: GCP Setup
+**Step 1: GCP Setup**
 
 First, we need to setup our GCP to have Jenkins and Kubernetes.To get started:
 
@@ -21,7 +21,7 @@ First, we need to setup our GCP to have Jenkins and Kubernetes.To get started:
     · Enter your project details such as name and location
     · Click on create, you should see the created project on the dashboard
  
-Step 2: Setup Kubernetes on GCP
+**Step 2: Setup Kubernetes on GCP**
 
     · Click on Kubernetes Engine 
     · Click on cluster, then click on create
@@ -29,7 +29,8 @@ Step 2: Setup Kubernetes on GCP
     · Enter your cluster name and click on create
     . Enable Kubernetes Engine API
 ![image](https://user-images.githubusercontent.com/32533425/198981692-0515afd3-fa1b-4fa3-ad79-9626a04f9356.png)
-Step 3: Setting up Jenkins on GCP
+
+**Step 3: Setting up Jenkins on GCP**
 
 The next step is to create Jenkins’s instance on GCP.
 
@@ -118,7 +119,7 @@ To Add GCP Kubernetes Cluster Credentials:
 ![image](https://user-images.githubusercontent.com/32533425/198993887-ed6998d1-ff42-467d-9a2e-bb93f389a710.png)
 
 
-Step 4: Creating a Docker Container
+**Step 4: Creating a Docker Container**
 
     . Make sure you have docker installed on your machine, install from https://docs.docker.com/engine/install/ubuntu/
     . Create a file called Dockerfile. Docker requires the file to be called ‘Dockerfile’
@@ -139,7 +140,7 @@ Step 4: Creating a Docker Container
 ![image](https://user-images.githubusercontent.com/32533425/198989937-4607bb99-4dec-41fe-a967-95ccb8f78b2c.png)
 
 
-Step 5: Create deployment file for Kubernetes and JenkinsFile for the Jenkins pipeline
+**Step 5: Create deployment file for Kubernetes and JenkinsFile for the Jenkins pipeline**
 
 A deployment.yaml file in the repository is added which defines how the built container should be deployed on Kubernetes.
 The definition pulls the built container from Docker Hub and creates a new deployment with it in your Kubernetes cluster. It also creates a LoadBalancer service so that the deployment can be accessed from outside the cluster.
@@ -153,7 +154,7 @@ What the Jenkins pipeline file does are as follows;
     · Update the deployment YAML file with the build number
     · Deploy to GKE
 
-Step 6: Jenkins Pipeline Setup
+**Step 6: Jenkins Pipeline Setup**
 
 We are using Jenkins as our CI/CD
 
@@ -173,13 +174,13 @@ We are using Jenkins as our CI/CD
 
 The Job will appear on your jenkins dashboard
 
-Step 6: Building and Deploying the Application
+**Step 7: Building and Deploying the Application**
 
 Click on selected job and Click on Build now to run the job
 
 ![image](https://user-images.githubusercontent.com/32533425/198995821-4ce1b091-225e-4b71-8ab2-69f2f09480c6.png)
 
-After successful Jenkins job build, an instance of the application(s) is/are created on GKE
+After successful Jenkins job build, an instance of the application(s) is/are created on GKE.So any further commits on github will trigger jenkin build and deploy changes directly on the service deployed in the GKE Cluster.
 
 ![image](https://user-images.githubusercontent.com/32533425/198996196-8d7351ee-1678-45aa-b08c-6dee06dd0626.png)
 
