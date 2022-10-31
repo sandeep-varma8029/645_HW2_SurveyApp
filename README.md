@@ -68,8 +68,7 @@ The above URL will not be available, we need to add a firewall rule that will al
 
 http://<jenkins_external_ip>:8080 will be accessible, install the necessary plugins and you will be able to login to Jenkins
 The simplest and most common way of installing plugins is through the Manage Jenkins > Manage Plugins view, available to administrators of a Jenkins environment.
-Under the Available tab, plugins available for download from the configured Update Center can be searched and considered:
-Important plugins to be installed:
+Under the Available tab, plugins available for download from the configured Update Center can be searched and considered.Important plugins to be installed:
 
       Google Kubernetes Engine Plugin
       Kubernetes
@@ -86,4 +85,29 @@ Important plugins to be installed:
       Github App Kubernetes Credentials
       GitHub Branch Source Plugin
       Pipeline: GitHub Groovy Libraries
+      
 ![image](https://user-images.githubusercontent.com/32533425/198983852-f49962fd-5b45-42fc-b938-023979529382.png)
+
+
+Step 4: Creating a Docker Container
+
+    . Make sure you have docker installed on your machine, install from https://docs.docker.com/engine/install/ubuntu/
+    . Create a file called Dockerfile. Docker requires the file to be called ‘Dockerfile’
+    . Build the HW1 Survey Web App project on eclipse and put the war file in the same folder as the Dockerfile,Note that ‘HW1_Survey_from’ is the display name of the       Tomcat application
+    . In the DockerFile, use the FROM command to get the initial image for the build, We want to run the war file in Tomcat so we should use the tomcat image:
+      FROM tomcat:8.5.47-jdk8-openjdk
+    . Next, we need to drop the war file in the webapps folder:
+      COPY ./HW1_Survey_form.war /usr/local/tomcat/webapps
+    . On the command line, use this command: ‘docker build -t hw2surveyapp:1.0’ You can use whatever name and tag you want
+    . Verify that the image is properly working by running ‘docker run -it -p 8080 hw2surveyapp:1.0’ and open a browser at http://localhost:8080/HW1_Survey_from
+    . On the command line, login to docker using ‘docker login -u <your username>’
+    . Change the name of you image to be <your username on dockerhub>/<name of the app>:<image tag> using the docker tag command. In my case it is: ‘docker tag   
+    hw2surveyapp:1.0 sandeepvarma99/hw2surveyapp:1.0’
+    . Verify that your image is on Docker Hub,Your image should be accessible from the internet
+    
+    
+    
+![image](https://user-images.githubusercontent.com/32533425/198989937-4607bb99-4dec-41fe-a967-95ccb8f78b2c.png)
+
+
+Step 5: Create deployment file for Kubernetes
