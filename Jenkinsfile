@@ -1,3 +1,12 @@
+// Sai Sandeep Varma Mudundi, G01352322, smudund@gmu.edu
+/* the script Jenkins will use to build and deploy the application. What the Jenkins pipeline file does are as follows:
+
+· Pull from your repository
+· Dockerize the application
+· Push the image to docker hub
+· Update the deployment YAML file with the build number
+· Deploy to GKE 
+*/
 pipeline {
     agent any
     environment {
