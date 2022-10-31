@@ -88,6 +88,35 @@ Under the Available tab, plugins available for download from the configured Upda
       
 ![image](https://user-images.githubusercontent.com/32533425/198983852-f49962fd-5b45-42fc-b938-023979529382.png)
 
+Storing Credentials in Jenkins:
+We will use the Jenkins credentials store for the pipeline to communicate with the Kubernetes cluster and the Docker Hub registry
+
+    Navigate to the "Dashboard > Manage Jenkins > Manage Credentials" menu item.
+    Select the "System" sub-menu" and the "Global credentials" domain.
+    Click the "Add credentials" link. 
+    Select the "Username with password" credential type and enter your Docker Hub username and password in the corresponding fields. 
+    Set the "ID" field to dockerID. 
+    Click "OK" to save the changes.
+![image](https://user-images.githubusercontent.com/32533425/198992781-37b7918f-0b5b-49b7-b920-31c8b73997ee.png)
+
+
+To Add GCP Kubernetes Cluster Credentials:
+
+    Navigate to the "IAM & admin -> Service accounts" page and create a new service account.
+    For this Assignment, I have created a service account with the name "Compute Engine default service account". 
+    Assign it the "Kubernetes Engine Admin" role.
+    Next, create a new JSON key for the service account. 
+    Download and save this key.
+    
+![image](https://user-images.githubusercontent.com/32533425/198993771-28d4921d-329a-44d8-8c2e-0ef5e77a4360.png)
+
+    On Jenkins Click the "Add credentials" link.
+    Select the "Google Service Account from private key" credential type and set the project name (which doubles as the credential identifier) to my project name. 
+    Select the "JSON key" radio button and upload the JSON key obtained in the previous step in Setting up the GCP Account. 
+    Click "OK" to save the changes.
+    
+![image](https://user-images.githubusercontent.com/32533425/198993887-ed6998d1-ff42-467d-9a2e-bb93f389a710.png)
+
 
 Step 4: Creating a Docker Container
 
