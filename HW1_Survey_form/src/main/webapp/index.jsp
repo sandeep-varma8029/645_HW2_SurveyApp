@@ -20,7 +20,7 @@ date of survey and other form fields like Checkboxes, Radio Buttons, drop down a
 </head>
 
 <body>
-	<h1>GMU Student Survey Form 2</h1>
+	<h1>GMU Student Survey Form</h1>
 
 	<!-- Create Form -->
 	<form id="form">
