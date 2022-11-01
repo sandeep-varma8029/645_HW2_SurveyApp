@@ -9,6 +9,7 @@ metadata:
   labels:
     app: surveyapp
 spec:
+  replicas: 3
   strategy:
     type: Recreate
   selector:
