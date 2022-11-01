@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!--Sai Sandeep Varma Mudundi, G01352322, smudund@gmu.edu-->
+<!--Team Details-->
+<!--Sai Anjaneya Sowrab Meduri( G01270421)-->
+<!--Rajeev Priyatam Panchadula( G01333080)-->
+<!--Lakshmi Guttikonda(G01334433)-->
 <!--This is the main Survey form with Required fields for first name, last name, street address, city, state, zip, telephone number, e-mail, and
 date of survey and other form fields like Checkboxes, Radio Buttons, drop down and Submit and cancel buttons -->
 <!--Took Reference for https://www.geeksforgeeks.org/build-a-survey-form-using-html-and-css/-->
