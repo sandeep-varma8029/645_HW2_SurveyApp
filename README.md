@@ -1,6 +1,9 @@
 # 645 HW2 Survey Web Application using CI/CD Pipeline
+
+GitHub URL : https://github.com/sandeep-varma8029/645_HW2_SurveyApp
+
 This Assignment invloves establishing a CI/CD pipeline that includes a Git source code repository of the survey application developed in HW1 Assignment , and Jenkins for automated build and for the automated deployment of your application on Kubernetes. This is achieved by building and deploying a Docker Image to GCP Kubernetes cluster with the help of a Jenkins Pipeline.
-The Folder has the source code of the Web App from eclipse, Dockerfile, Jenkinsfile, deployment.yaml and the HW1 Survey Application's war file.
+The Git Repo Folder has the source code of the Web App from eclipse, Dockerfile, Jenkinsfile, deployment.yaml and the HW1 Survey Application's war file.
 The below image shows an overview of the implementation
 
 ![image](https://user-images.githubusercontent.com/32533425/198972473-9fd57b50-3ca4-4d66-a7d8-62386478b7a9.png)
