@@ -1,4 +1,10 @@
 // Sai Sandeep Varma Mudundi, G01352322, smudund@gmu.edu
+/*
+Team Details:
+Sai Anjaneya Sowrab Meduri( G01270421)
+Rajeev Priyatam Panchadula( G01333080)
+Lakshmi Guttikonda(G01334433)
+*/
 /* the script Jenkins will use to build and deploy the application. What the Jenkins pipeline file does are as follows:
 
 · Pull from your repository
