@@ -180,7 +180,10 @@ Click on selected job and Click on Build now to run the job
 
 ![image](https://user-images.githubusercontent.com/32533425/198995821-4ce1b091-225e-4b71-8ab2-69f2f09480c6.png)
 
-After successful Jenkins job build, an instance of the application(s) is/are created on GKE.So any further commits on github will trigger jenkin build and deploy changes directly on the service deployed in the GKE Cluster.
+After successful Jenkins job build, an instance of the application(s) is/are created on GKE.So any further commits on github will trigger jenkin build and deploy changes directly on the service deployed in the GKE Cluster runnig on 3 pods.
+
+![image](https://user-images.githubusercontent.com/32533425/199136947-7b0d9150-299e-4b04-a725-3db0e7904c84.png)
+
 
 ![image](https://user-images.githubusercontent.com/32533425/198996196-8d7351ee-1678-45aa-b08c-6dee06dd0626.png)
 
