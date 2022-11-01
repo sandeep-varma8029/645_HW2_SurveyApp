@@ -143,7 +143,7 @@ To Add GCP Kubernetes Cluster Credentials:
 **Step 5: Create deployment file for Kubernetes and JenkinsFile for the Jenkins pipeline**
 
 A deployment.yaml file in the repository is added which defines how the built container should be deployed on Kubernetes.
-The definition pulls the built container from Docker Hub and creates a new deployment with it in your Kubernetes cluster. It also creates a LoadBalancer service so that the deployment can be accessed from outside the cluster.
+The definition pulls the built container from Docker Hub and creates a new deployment with it in your Kubernetes cluster running on 3 pods. It also creates a LoadBalancer service so that the deployment can be accessed from outside the cluster.
 
 Finally, create a pipeline script named Jenkinsfile (also added in the repo). This is the script Jenkins will use to build and deploy the application.
 What the Jenkins pipeline file does are as follows;
