@@ -195,12 +195,21 @@ The application can be assessed at http://34.122.32.168:8080/HW1_Survey_form/
 
 AWS URL of the SurveyPage : http://studentsurveyapp.s3-website-us-east-1.amazonaws.com/
 
-    AWS URL of Sai Sandeep Varma Mudundi HomePage: http://personalwebsitehw1.s3-website-us-east-1.amazonaws.com/
-    AWS Homepage URL of Sai Anjaneya Sowrab Meduri( G01270421): http://swe645-msa.s3-website-us-east-1.amazonaws.com/
-    AWS Homepage URL of Rajeev Priyatam Panchadula( G01333080): http://rajeevpartone.s3-website-us-east-1.amazonaws.com/
-    AWS Homepage URL of Lakshmi Guttikonda(G01334433): http://cs645ha.com.s3-website-us-east-1.amazonaws.com/
+AWS URL of Sai Sandeep Varma Mudundi HomePage: http://personalwebsitehw1.s3-website-us-east-1.amazonaws.com/
+
+AWS Homepage URL of Sai Anjaneya Sowrab Meduri( G01270421): http://swe645-msa.s3-website-us-east-1.amazonaws.com/
+
+AWS Homepage URL of Rajeev Priyatam Panchadula( G01333080): http://rajeevpartone.s3-website-us-east-1.amazonaws.com/
+
+AWS Homepage URL of Lakshmi Guttikonda(G01334433): http://cs645ha.com.s3-website-us-east-1.amazonaws.com/
 
 Project Demo Link : https://drive.google.com/file/d/1EqZemRzBKUokM3IK3q_2spCHs0Q79_wx/view?usp=share_link
+
+Team Details and Contributions:
+Sai Sandeep Varma Mudundi (G01352322) - Jenkins CI/CD pipeline creation, Kubernetes Cluster setup, containerization of web app,Jenkinsfile, deployment file creation ,readme and documentation
+Sai Anjaneya Sowrab Meduri( G01270421) - Docker setup,Dockerfile creation, hosting of web application container on kubernetes cluster documentation and containerization
+Rajeev Priyatam Panchadula( G01333080) - Git SCM polling,Virtual Machine instance configuration and documentation, war file generation
+Lakshmi Guttikonda(G01334433) - Documentation, AWS hosting of homepage, maintaining jenkins plugins and IAM credintials, and web appliction contribution
 
 References : 
 
